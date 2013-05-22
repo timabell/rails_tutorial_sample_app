@@ -9,6 +9,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'spork-rails', github: 'railstutorial/spork-rails'
 end
 
 # Gems used only for assets and not required
