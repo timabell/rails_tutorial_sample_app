@@ -1,5 +1,9 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
+
+# http://ruby.railstutorial.org/chapters/static-pages?version=4.0#sec-spork_and_guard
+require 'active_support/inflector'
+
 guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, 
                :rspec_env    => { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
