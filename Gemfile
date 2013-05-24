@@ -8,8 +8,9 @@ gem 'rails', '4.0.0.beta1'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'guard-spork'
   gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'libnotify'
   gem 'spork-rails', github: 'railstutorial/spork-rails'
 end
 
