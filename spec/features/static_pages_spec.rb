@@ -6,16 +6,11 @@ describe "StaticPages" do
 
   describe "Home page" do
     before { visit root_path }
+    subject { page }
 
-    it "should have the content 'Sample App'" do
-      page.should have_selector('h1', :text => 'Sample App')
-    end
-    it 'should have the right title' do
-      expect(page).to have_title "#{base_title}"
-    end
-    it 'shouldn\'t have a per-page title' do
-      expect(page).not_to have_title('|')
-    end
+    it { should have_selector('h1', :text => 'Sample App') }
+    it { should have_title("#{base_title}") }
+    it { should_not have_title('|') }
   end
 
   describe "Help page" do
