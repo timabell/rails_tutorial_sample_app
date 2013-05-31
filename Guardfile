@@ -4,6 +4,11 @@
 # http://ruby.railstutorial.org/chapters/static-pages?version=4.0#sec-spork_and_guard
 require 'active_support/inflector'
 
+guard 'rails' do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
 guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' },
                :rspec_env    => { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
@@ -53,4 +58,3 @@ guard :rspec, after_all_pass: false do
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
 end
-

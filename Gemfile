@@ -11,6 +11,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'guard-rails'
   gem 'libnotify'
   gem 'spork-rails', github: 'railstutorial/spork-rails'
 end
