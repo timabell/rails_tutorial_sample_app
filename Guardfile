@@ -4,7 +4,8 @@
 # http://ruby.railstutorial.org/chapters/static-pages?version=4.0#sec-spork_and_guard
 require 'active_support/inflector'
 
-# tried to speed up the test notifications with timeout 1, but ubuntu dis-respects the parameter :-(
+# tried to speed up the test notifications with timeout 1,
+# but ubuntu dis-respects the parameter :-( https://bugs.launchpad.net/ubuntu/+source/notify-osd/+bug/390508
 notification :libnotify, :timeout => 1, :transient => true, :append => false, :urgency => :low
 
 guard 'rails' do
