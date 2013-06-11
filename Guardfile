@@ -10,7 +10,7 @@ notification :libnotify, :timeout => 1, :transient => true, :append => false, :u
 
 guard 'rails' do
   watch('Gemfile.lock')
-  watch(%r{^(config|lib)/.*})
+  watch(%r{^(config|lib)/[a-z].*})
 end
 
 guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' },
