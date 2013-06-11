@@ -9,4 +9,4 @@ http://ruby.railstutorial.org/chapters/static-pages#top
 
 Yay \o/
 
-This app is published to http://heroku3.timwise.co.uk/static_pages/home (which may be slightly out of date)
+This app is published to http://heroku3.timwise.co.uk/ (which may be slightly out of date)
