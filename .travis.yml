@@ -1,0 +1,4 @@
+# travis config for travis-ci (dedfaults to ruby 1.9 which is too old)
+language: ruby
+rvm:
+ - 2.0.0
